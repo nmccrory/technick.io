@@ -26,9 +26,6 @@
     <span>
       <h3>Industry Trends</h3>
     </span>
-    <span>
-      <h3><i class="material-icons nav_icon">trending_up</i></h3>
-    </span>
   </div>
   <div class="newsWrapper">
     <div class='navNewsItem' ng-repeat='news_piece in BC.news | limitTo: 6' style="background: url('{{news_piece.img_url}}') no-repeat center center;">
@@ -49,7 +46,7 @@
           <div id='headingWrapper'> 
             
             <div id="logo">
-              <h2 style='font-family: retroFont; color:white;text-shadow:1px 1px 4px black; -webkit-text-shadow: 1px 1px 4px black;vertical-align:middle;display:inline;margin:0px;'>TECHNICK</h2>
+              <h2 style='font-family: retroFont;color:white;vertical-align:middle;display:inline;margin:0px;'>TECHNICK</h2>
             </div>
             <div id="clock">
               <h5 class='clockText' >{{BC.clock | date: 'h:mm a'}}</h5>

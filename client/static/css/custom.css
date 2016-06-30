@@ -522,7 +522,6 @@ ul.share-buttons{
 .clockText{
 	color:white; 
 	margin:0px;
-	text-shadow: 1px 1px 4px black;
 }
 #logo{
 	vertical-align: middle;
@@ -870,10 +869,9 @@ fieldset{
 	height:100vh;
 }
 .newsWrapper{
-	margin-top: 1vh;
 	overflow:scroll;
 	height:57vh;
-	padding:5vh 2vw;
+	padding:3vh 2vw;
 }
 .navNewsItem{
 	margin:0 auto;
@@ -919,15 +917,16 @@ fieldset{
 .rightNavTitle{
 	background:white;
 	color: #A47C52;
-	padding:1vh;
-	border-bottom: 2px solid #A47C52;
-	text-align: center;
+	padding:0px 2vw;
+	border-bottom: 3px solid #A47C52;
 	margin:0px;
 }
 .rightNavTitle span{
 	display:inline-block;
 	vertical-align: top;
 	font-style:italic;
+	text-align: center;
+	width:100%;
 }
 #trendingRow{
 	background:white;
@@ -1002,7 +1001,7 @@ fieldset{
 	margin:0px;
 }
 .trendingCount{
-	border-bottom: 1px solid #9156AB;
+	border-bottom: 1px solid  #5FCEEA;
 	color:white;
 }
 .trendingCount p{
