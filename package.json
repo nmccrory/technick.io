@@ -5,7 +5,7 @@
   	"node": "0.12.2"
   },
   "scripts":{
-    "start": "server.js"
+    "start": "node main.js"
   },
   "env": {
     "MONGO_URL": "mongodb://nmccrory:cookie45@apollo.modulusmongo.net:27017/inyw6ovI"
