@@ -30,7 +30,7 @@ i{
     top: 0;
     width: 100%;
     border:none !important;
-    background:linear-gradient(to right,#11BCDC,#9F23EE) !important;
+    background:linear-gradient(to right,#009DDF,#9F23EE) !important;
     color:white !important;
     transition: background 1000ms linear;
     z-index:1;
