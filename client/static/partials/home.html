@@ -23,10 +23,12 @@
 </div>
 <div class="rightSideNavbar" id='rightSideNavbar'>
   <div class="rightNavTitle">
-    <h5>
-      <i class="material-icons nav_icon">trending_up</i>
-    </h5>
-    <h6>Recent News</h6>
+    <span>
+      <h3>Industry Trends</h3>
+    </span>
+    <span>
+      <h3><i class="material-icons nav_icon">trending_up</i></h3>
+    </span>
   </div>
   <div class="newsWrapper">
     <div class='navNewsItem' ng-repeat='news_piece in BC.news | limitTo: 6' style="background: url('{{news_piece.img_url}}') no-repeat center center;">
@@ -69,7 +71,7 @@
             <i class="material-icons nav_icon" ng-click='BC.leftNavExpand()'>dehaze</i>
           </div>
           <div id='mobileNavLogo'>
-            <h5 style='font-family: retroFont; color:white;'>TECHNICK</h5>
+            <h5 style='font-family: retroFont; color:#A47C52;'>TECHNICK</h5>
           </div>
           <div id='newsNavExpand'>
             <i class="material-icons nav_icon" ng-click='BC.rightNavExpand()' style='font-size:2.5em !important'>trending_up</i>
@@ -137,9 +139,10 @@
 <div class="row" id="trendingRow">
   <div class="container">
     <div id="trendingTitleWrapper">
-      <div id="trendingTitle">
+      <!-- <div id="trendingTitle">
         <h5>Recent News</h5>
-      </div>
+      </div> -->
+      <h1>Industry News</h1>
     </div>
     <div id="trendingLeftChevron">
       <a href><i class="material-icons" ng-hide='BC.trendNavStatus' ng-click='BC.trendNavLeft()'>chevron_left</i></a>

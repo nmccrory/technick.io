@@ -227,10 +227,10 @@ mccroryModule.directive('setClassWhenAtTop', function ($window,$timeout) {
         if ($window.pageYOffset >= offsetTop) {
           element.addClass(topClass);
           document.getElementById("blogContainer").style.marginTop = (elementHeight+12)+"px";
-          var c = document.getElementsByClassName("navbar-item");
-          for(var i=0;i<c.length;i++){
-          	c[i].style.color = "white";
-          }
+          // var c = document.getElementsByClassName("navbar-item");
+          // for(var i=0;i<c.length;i++){
+          // 	c[i].style.color = "white";
+          //}
           document.getElementById("mobileNavLogo").classList.remove("inactive");
           document.getElementById("mobileNavLogo").classList.add("active");
           console.log("Inside of scroll conditional");
@@ -239,10 +239,10 @@ mccroryModule.directive('setClassWhenAtTop', function ($window,$timeout) {
           document.getElementById("mobileNavLogo").classList.remove("active");
           document.getElementById("mobileNavLogo").classList.add("inactive");
           document.getElementById("blogContainer").style.marginTop = 0;
-          var c = document.getElementsByClassName("navbar-item");
-          for(var i=0;i<c.length;i++){
-          	c[i].style.color = "black";
-          }
+          // var c = document.getElementsByClassName("navbar-item");
+          // for(var i=0;i<c.length;i++){
+          // 	c[i].style.color = "black";
+          //}
         }
       });
     }

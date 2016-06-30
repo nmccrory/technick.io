@@ -8,6 +8,8 @@
 }
 body{
 	background-color: #FBFBFB;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight:400;
 }
 footer {
 	text-align: center;
@@ -29,9 +31,10 @@ i{
     position: fixed;
     top: 0;
     width: 100%;
-    border:none !important;
-    background:linear-gradient(to right,#009DDF,#9F23EE) !important;
-    color:white !important;
+    background:white;
+    border-bottom: 3px solid #5FCEEA !important;
+  /*  border:none !important;*/
+/*    background:linear-gradient(to right,#00FF9E,#9F23EE) !important;*/
     transition: background 1000ms linear;
     z-index:1;
 }
@@ -379,15 +382,15 @@ ul.share-buttons{
 }
 
 #navcontainer {
-	background:transparent;
-	color:black;
+	background:white;
+	color:#A47C52;
 	margin-bottom:10px;
 	transition: background 1s linear;
 	-webkit-transform: translate3d(0, 0, 0);
    -moz-transform: translate3d(0, 0, 0);
    -ms-transform: translate3d(0, 0, 0);
    transform: translate3d(0, 0, 0);
-      border-bottom: 2px solid #E6EBEF;
+    border-bottom: 2px solid #E6EBEF;
 }
 #navcolumn{
 	vertical-align: middle;
@@ -899,7 +902,7 @@ fieldset{
 .timeSinceRepost{
 	width: 100%;
 	padding: 0px 1vh;
-	background-color: #9156AB;
+	background-color: #5FCEEA;
 }
 .timeSinceRepost h6{
 	display:inline;
@@ -907,18 +910,24 @@ fieldset{
 .textholderCount{
 	text-align: left;
 	width:100%;
-	border-bottom: 1px solid #9156AB;
+	border-bottom: 1px solid #5FCEEA;
 }
 .textholderCount h6{
 	padding: 0px 2vw;
 	margin:0px;
 }
 .rightNavTitle{
-	background: linear-gradient(to left, #E02936, #864CA1);
-	color:white;
+	background:white;
+	color: #A47C52;
 	padding:1vh;
+	border-bottom: 2px solid #A47C52;
 	text-align: center;
 	margin:0px;
+}
+.rightNavTitle span{
+	display:inline-block;
+	vertical-align: top;
+	font-style:italic;
 }
 #trendingRow{
 	background:white;
@@ -941,8 +950,9 @@ fieldset{
 }
 #trendingTitleWrapper{
 	display: inline-block;
-	background: linear-gradient(to left, #7b4397, #dc2430);
+/*	background: linear-gradient(to left, #7b4397, #dc2430);*/
 	width: 165px;
+	font-style:italic;
 	vertical-align: middle;
 	z-index:0;
 	padding: 5px;
