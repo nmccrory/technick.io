@@ -1,0 +1,20 @@
+{
+  "name": "MEAN_Friends",
+  "version": "0.0.1",
+  "engines": {
+  	"node": "0.12.2"
+  },
+  "scripts":{
+    "start": "server.js"
+  },
+  "env": {
+    "MONGO_URL": "mongodb://nmccrory:cookie45@apollo.modulusmongo.net:27017/inyw6ovI"
+  },
+  "dependencies": {
+    "angular-timeago": "^0.1.12",
+    "body-parser": "^1.13.1",
+    "express": "~4.2.0",
+    "mongo": "^0.1.0",
+    "mongoose": "^4.1.1"
+  }
+}

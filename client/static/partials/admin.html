@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>
+			Admin - mccrorymodule
+		</title>
+	</head>
+	<body>
+		<div class="container" ng-controller="blogsController as BC">
+			<div class="row">
+				<div class="six columns">
+					<h1>Add blog post</h1>
+					<label>Title</label>
+					<input type="text" name='title' ng-model='BC.blogPost.title'>
+					<label>Author</label>
+					<input type="text" name='author' ng-model='BC.blogPost.author'>
+					<label>Image URL</label>
+					<input type="text" name='img_url' ng-model='BC.blogPost.img_url'>
+					<label>Rest Route</label>
+					<input type="text" name='rest_route' ng-model='BC.blogPost.rest_route'>
+					<label>Content</label>
+					<textarea name="content" ng-model='BC.blogPost.content' style></textarea>	
+					<button ng-click='BC.addPost()' style='display:block'>Add post</button>
+				</div>
+				<div class="six columns">
+					<h1>Add Portfolio Project</h1>
+					<label>Project Title</label>
+					<input type="text" name='title' ng-model='BC.portfolio.title'>
+					<label>Image URL</label>
+					<input type="text" name='img_url' ng-model='BC.portfolio.img_url'>
+					<label>Description</label>
+					<input type="text" name='description' ng-model='BC.portfolio.description'>
+					<label>App Url</label>
+					<input type="text" name='url' ng-model='BC.portfolio.app_url'>
+					<label>Github Link</label>
+					<input type="text" name='github' ng-model='BC.portfolio.github'>
+					<button style='display:block' ng-click='BC.addProject()'>Add Project</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="six columns">
+					<h1>Repost News Story</h1>
+					<label>Article Title</label>
+					<input type="text" name='title' ng-model='BC.news_repost.title'>
+					<label>First Lines of Text</label>
+					<input type="text" name='text_line' ng-model='BC.news_repost.text_line'>
+					<label>Image URL</label>
+					<input type="text" name='img_url' ng-model='BC.news_repost.img_url'>
+					<label>Source Name</label>
+					<input type="text" name='src_name' ng-model='BC.news_repost.src_name'>
+					<label>Article URL</label>
+					<input type="text" name='article_url' ng-model='BC.news_repost.article_url'>
+					<button style='display: block' ng-click='BC.addNews()'>Add News Story</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="six columns">
+					<h2>Delete Post</h2>
+					<input type="text" ng-model='BC.deletePost.id'>
+					<button ng-click='BC.deletePost()'>Delete Post</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

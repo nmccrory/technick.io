@@ -1,0 +1,15 @@
+$(document).ready(function(){
+	$("#expandedlist").hide();
+	$("#listclose").hide();
+	$("#expandedlist").slideUp();
+	$("#expander").click(function(){
+		$("#expander").hide()
+		$("#listclose").fadeIn('slow');
+		$("#expandedlist").slideDown('slow');
+	})
+	$("#listclose").click(function(){
+		$("#listclose").hide();
+		$("#expander").fadeIn('slow');
+		$("#expandedlist").slideUp();
+	})
+})

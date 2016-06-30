@@ -1,0 +1,96 @@
+<div ng-controller="blogsController as BC">
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div id="navbarBackgroundLeft" ng-click='BC.leftNavClose()'>
+  
+</div>
+<div class="leftSideNavbar" id='leftSideNavbar'>
+  <div class="sideNavLogo">
+    <h1 style='font-family: retroFont; color:#7A69EC;'>TECHNICK</h1>
+  </div>
+  
+  <ul class='mobileNavlist'>
+    <a href="/#/"><li>Home</li></a>
+    <a href="/#/archive"><li>Blog</li></a>
+    <a href="/#/about"><li>About</li></a>
+    <a href="/#/portfolio"><li>Portfolio</li></a>
+
+  </ul>
+</div>
+<div id="navbarBackgroundRight" ng-click='BC.rightNavClose()'>
+  
+</div>
+<div class="rightSideNavbar" id='rightSideNavbar'>
+  <div class="rightNavTitle">
+    <h5>
+      <i class="material-icons nav_icon">trending_up</i>
+    </h5>
+    <h6>Recent News</h6>
+  </div>
+  <div class="newsWrapper">
+    <div class='navNewsItem' ng-repeat='news_piece in BC.news | limitTo: 6' style="background: url('{{news_piece.img_url}}') no-repeat center center;">
+      <a href="{{news.article_url}}" style='text-decoration:none'><div class="textholder">
+        <div class='textholderCount'><span class='textHolderSpan'><h6 style='display:inline;'>{{$index+1}}</h6><h6 style='display:inline;'><b>{{news_piece.src_name}}</b></h6></span><span class='textHolderSpan'></span></div>
+        <span class='timeSinceRepost'><h6>{{news_piece.created_at | timeAgo }}</h6></span>
+        <h6>{{news_piece.title | characters: 50}}</h6>
+      </div>
+      </a>
+    </div>
+  </div>
+</div>
+<div id="background">  
+  <div style="background:transparent">
+    <div class="row" style="background:url('../images/bannerImage.jpg') no-repeat ;background-size: cover">
+      <div class="twelve column" style='background:RGBA(8, 6, 7, .4);'>
+        <div class="container">
+          <div id='headingWrapper'> 
+            
+            <div id="logo">
+              <h2 style='font-family: retroFont; color:white;text-shadow:1px 1px 4px black; margin:0px '>TECHNICK</h2>
+            </div>
+            <div id="clock">
+              <h5 style='color:white; margin:0px'>{{BC.clock | date: 'h:mm a'}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div set-class-when-at-top="fix-to-top" id="navcontainer">
+    <div class="row">
+      <div class="twelve column" id="navcolumn">
+        <div class="container" id='mobileWrapper'>  
+          <div id="listexpand">
+            <i class="material-icons nav_icon" ng-click='BC.leftNavExpand()'>dehaze</i>
+          </div>
+          <div id='mobileNavLogo'>
+            <h5 style='font-family: retroFont; color:white;'>TECHNICK</h5>
+          </div>
+          <div id='newsNavExpand'>
+            <i class="material-icons nav_icon" ng-click='BC.rightNavExpand()' style='font-size:2.5em !important'>trending_up</i>
+          </div>
+        </div>
+        <div class="container" style='background:transparent'>
+        <ul class="navbar-list" id="navbar-list">
+          <li class="nav-element"><a href="/#/" class='navbar-item'>Home</a></li>
+          <li class="nav-element"><a href="/#/archive" class='navbar-item'>Blog</a></li>
+          <li class="nav-element"><a href="/#/about" class='navbar-item'>About</a></li>
+          <li class="nav-element"><a href="/#/portfolio" class='navbar-item'>Portfolio</a></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+<div class="container">
+  <div class="row">
+    <div class='archive_blog' ng-repeat="post in BC.posts | filter: filterBlogs">
+      <div class="archive_img" style="background: url('{{post.img_url}}') no-repeat center;"><div class="archive_img_overlay"></div></div>
+      <div class="archive_info">
+        <a href="/#/blogs/{{post.rest_route}}"><h5>{{post.title}}</h5></a>
+        <i class="material-icons">history</i><h6><b>{{post.updated_at | date}}</b></h6>
+        <p>By: {{post.author}}</p>
+        <!-- <p>{{post.content | limitTo: 80}}...</p> -->
+      </div>
+    </div>
+  </div>
+</div>

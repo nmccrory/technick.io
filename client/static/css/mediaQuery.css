@@ -1,0 +1,248 @@
+/* Larger than mobile */
+/*@media (min-width: 400px) {
+	#logo{
+		display:none;
+	}
+	#mobileNavLogo{
+		vertical-align: middle;
+		display: none;
+	}
+	#current_tweet{
+		display:block;
+		height: 30vh;
+		overflow:hidden;
+		width:100%;
+	}
+
+
+}*/
+
+/* Larger than phablet */
+/*@media (min-width: 550px) {
+	#current_tweet_wrapper{
+		display:none;
+	}
+	#logo{
+		display:inline-block !important;
+		max-height:100%;
+	}
+	#mobileWrapper{
+		display:none !important;
+	}
+}
+*/
+/* Larger than tablet */
+/*@media (min-width: 750px) {
+	.slideshow{
+		width:70%;
+	}
+	fieldset{
+		display:inline-block !important;
+	}
+	#logo{
+		display: inline-block !important;
+		max-height:100%;
+	}
+	#mobileWrapper{
+		display:none !important;
+	}
+}
+*/
+/* Larger than desktop */
+/*@media (min-width: 1000px) {
+	.slideshow{
+		width:80%;
+	}
+	#logo{
+		max-height:100%;
+	}
+	#mobileWrapper{
+		display:none !important;
+	}
+}*/
+
+/* Larger than Desktop HD */
+/*@media (min-width: 1200px) {
+	.slideshow{
+		width:80%;
+	}
+	#logo{
+		max-height:100%;
+	}
+	#mobileWrapper{
+		display:none !important;
+	}
+}*/
+@media all and (min-width:260px) and (max-width:380px){
+	#twitter_wrapper{
+		display:none;
+	}
+	#listexpand {
+		display:inline-block;
+		vertical-align: middle;
+	}
+	#expander{
+		text-decoration: none;
+		text-align: center;
+		font-size: 2em;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	#current_tweet{
+		display:block;
+		overflow:hidden;
+		width:100%;
+	}
+	#navbar-list{
+		display:none !important;
+	}
+	#navcolumn{
+		z-index:1;
+		padding:.5vh;
+	}
+	#sidecolumn {
+		display:none;
+	}
+	#mobileNavLogo{
+		display: inline-block !important;
+	}
+	#newsNavExpand{
+		display: inline-block !important;
+	}
+	#trendingRow{
+		display:none !important;
+	}
+	#twitter_connect{
+		max-height:45px;
+	}
+	#tumblr_connect{
+		max-height: 45px;
+	}
+	#github_connect{
+		max-height:45px;
+	}
+	#banner_heading{
+		padding: 25vh 0px 35vh 0px;
+	}
+	#banner_heading img{
+		padding:1vh;
+	}
+	#aboutText{
+		font-size:16pt; 
+		width:95%;
+		text-align:center;
+		margin:0 auto;
+		margin-bottom:10vh
+	}
+}
+/*for smartphone*/
+@media all and (min-width:381px) and (max-width:480px){
+	#twitter_wrapper{
+		display:none;
+	}
+	#listexpand {
+		display:inline-block;
+		vertical-align: middle;
+	}
+	#expander{
+		text-decoration: none;
+		text-align: center;
+		font-size: 2em;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	#current_tweet{
+		display:block;
+		overflow:hidden;
+		width:100%;
+	}
+	#navbar-list{
+		display:none !important;
+	}
+	#navcolumn{
+		z-index:1;
+		padding:.5vh;
+	}
+	#sidecolumn {
+		display:none;
+	}
+	#mobileNavLogo{
+		display: inline-block !important;
+	}
+	#newsNavExpand{
+		display: inline-block !important;
+	}
+	#trendingRow{
+		display:none !important;
+	}
+	#twitter_connect{
+		max-height:45px;
+	}
+	#tumblr_connect{
+		max-height: 45px;
+	}
+	#github_connect{
+		max-height:45px;
+	}
+	#banner_heading{
+		padding: 25vh 0px 35vh 0px;
+	}
+	#banner_heading img{
+		padding:1vh;
+	}
+	#aboutText{
+		font-size:16pt; 
+		width:90%;
+		text-align:left;
+		margin:0 auto;
+		margin-bottom:5vh
+	}
+}
+/*for tablets*/
+@media all and (min-width:481px) and (max-width:950px){
+	#listexpand {
+		display:inline-block !important;
+		vertical-align: middle;
+	}
+	#current_tweet{
+		display:none;
+		overflow:hidden;
+		width:100%;
+	}
+	#expander{
+		text-decoration: none;
+		text-align: center;
+		font-size: 2em;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	#navbar-list{
+		display:none !important;
+	}
+	#navcolumn{
+		padding:.5vh;
+	}
+	#sidecolumn {
+		padding-bottom:5%;
+		border-bottom: 1px solid gray;
+	}
+	#mobileNavLogo{
+		display: inline-block !important;
+	}
+	#newsNavExpand{
+		display: inline-block !important;
+	}
+	#trendingRow{
+		display:none !important;
+	}
+	#banner_heading{
+		padding: 25vh 0px 35vh 0px;
+	}
+	#aboutText{
+		font-size:16pt; 
+		width:75%;
+		text-align:center;
+		margin:0 auto;
+		margin-bottom:10vh
+	}
+}

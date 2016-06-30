@@ -1,0 +1,106 @@
+
+<div ng-controller="blogsController as BC">
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div id="navbarBackgroundLeft" ng-click='BC.leftNavClose()'>
+  
+</div>
+<div class="leftSideNavbar" id='leftSideNavbar'>
+  <div class="sideNavLogo">
+    <h1 style='font-family: retroFont; color:#7A69EC;'>TECHNICK</h1>
+  </div>
+  
+  <ul class='mobileNavlist'>
+    <a href="/#/"><li>Home</li></a>
+    <a href="/#/archive"><li>Blog</li></a>
+    <a href="/#/about"><li>About</li></a>
+    <a href="/#/portfolio"><li>Portfolio</li></a>
+
+  </ul>
+</div>
+<div id="navbarBackgroundRight" ng-click='BC.rightNavClose()'>
+  
+</div>
+<div class="rightSideNavbar" id='rightSideNavbar'>
+  <div class="rightNavTitle">
+    <h5>
+      <i class="material-icons nav_icon">trending_up</i>
+    </h5>
+    <h6>Recent News</h6>
+  </div>
+  <div class="newsWrapper">
+    <div class='navNewsItem' ng-repeat='news_piece in BC.news | limitTo: 6' style="background: url('{{news_piece.img_url}}') no-repeat center center;">
+      <a href="{{news.article_url}}" style='text-decoration:none'><div class="textholder">
+        <div class='textholderCount'><span class='textHolderSpan'><h6 style='display:inline;'>{{$index+1}}</h6><h6 style='display:inline;'><b>{{news_piece.src_name}}</b></h6></span><span class='textHolderSpan'></span></div>
+        <span class='timeSinceRepost'><h6>{{news_piece.created_at | timeAgo }}</h6></span>
+        <h6>{{news_piece.title | characters: 50}}</h6>
+      </div>
+      </a>
+    </div>
+  </div>
+</div>
+<div id="background">  
+  <div style="background:transparent">
+    <div class="row" style="background:url('../images/bellevue.jpg') no-repeat ;background-size: cover">
+      <div class="twelve column" style='background:RGBA(8, 6, 7, .4);'>
+        <div class="container">
+          <div id='headingWrapper'> 
+            
+            <div id="logo">
+              <h2 style='font-family: retroFont; color:white;text-shadow:1px 1px 4px black; vertical-align:middle;display:inline;margin:0px;'>TECHNICK</h2>
+            </div>
+            <div id="clock">
+              <h5 class='clockText' >{{BC.clock | date: 'h:mm a'}}</h5>
+            </div>
+            <!-- <div id="current_tweet">
+              <div>
+                <a class="twitter-timeline" href="https://twitter.com/nickmccrory" data-chrome=" nofooter noheader noborders"data-widget-id="675354364119293953" data-tweet-limit="1">Tweets by @nickmccrory</a>
+              </div>     
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  <div set-class-when-at-top="fix-to-top" id="navcontainer">
+    <div class="row">
+      <div class="twelve column" id="navcolumn">
+        <div class="container" id='mobileWrapper'>  
+          <div id="listexpand">
+            <i class="material-icons nav_icon" ng-click='BC.leftNavExpand()'>dehaze</i>
+          </div>
+          <div id='mobileNavLogo'>
+            <h5 style='font-family: retroFont; color:white;'>TECHNICK</h5>
+          </div>
+          <div id='newsNavExpand'>
+            <i class="material-icons nav_icon" ng-click='BC.rightNavExpand()' style='font-size:2.5em !important'>trending_up</i>
+          </div>
+        </div>
+        <div class="container" style='background:transparent'>
+        <ul class="navbar-list" id="navbar-list">
+          <li class="nav-element"><a href="/#/" class='navbar-item'>Home</a></li>
+          <li class="nav-element"><a href="/#/archive" class='navbar-item'>Blog</a></li>
+          <li class="nav-element"><a href="/#/about" class='navbar-item'>About</a></li>
+          <li class="nav-element"><a href="/#/portfolio" class='navbar-item'>Portfolio</a></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" id='blogContainer'>
+    <div class="row" style='text-align:center'>
+      <div class="about">
+        <img src="../images/TechnickAboutArt.jpg" alt="Technick About Art.">
+      </div>
+      <h1 style='text-align:center'>About</h1>
+      <p id='aboutText'>Technick is a full-stack blog and portfolio built by Nick McCrory. Mongo and Node are at the core of the backend in the stack, while Angular and Skeleton CSS boilerplate make for a lithe frontend. Technick emerges from a long passion for technology and desire to learn about, share, and develop different ideas all based around engineering for the future. I will be discussing fast-growing topics in computing and technology, as well as sharing code tutorials for other aspiring developers. </p>
+    </div>
+  </div>
+</div>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<!-- <footer>
+  <section>
+    <p>Built by Nick McCrory on Skeleton open source framework.</p>
+    <p><a href="http://getskeleton.com">Get Skeleton</a></p>
+  </section>
+</footer> -->
