@@ -1040,3 +1040,28 @@ fieldset{
 	margin:0 auto;
 	margin-bottom:10vh
 }
+#technickHeader{
+	text-align: center;
+	width:100%;
+	padding:5vh 0px;
+}
+#technickHeader img, h4{
+	vertical-align: bottom;
+	display:inline-block;
+}
+#technickHeader img{
+	max-width:60px;
+}
+#technickHeader h4{
+	margin:0px;
+	margin-left: 1vh;
+	color:gray;
+}
+#resumeLinkContainer{
+	padding: 32vh 0px;
+	width:100%;
+	text-align:center;
+}
+#resumeLinkContainer a{
+	text-decoration: none;
+}

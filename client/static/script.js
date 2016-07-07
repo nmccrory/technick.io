@@ -24,6 +24,9 @@ mccroryModule.config(function ($routeProvider){
 		templateUrl: 'partials/blog.html'
 		
 	})
+	.when('/resume', {
+		templateUrl: 'partials/resume.html'
+	})
 	.otherwise({
 		redirectTo: '/'
 	})
