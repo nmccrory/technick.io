@@ -25,10 +25,9 @@
 </div>
 <div class="rightSideNavbar" id='rightSideNavbar'>
   <div class="rightNavTitle">
-    <h5>
-      <i class="material-icons nav_icon">trending_up</i>
-    </h5>
-    <h6>Recent News</h6>
+    <span>
+      <h3>Industry Trends</h3>
+    </span>
   </div>
   <div class="newsWrapper">
     <div class='navNewsItem' ng-repeat='news_piece in BC.news | limitTo: 6' style="background: url('{{news_piece.img_url}}') no-repeat center center;">
@@ -49,7 +48,7 @@
           <div id='headingWrapper'> 
             
             <div id="logo">
-              <h2 style='font-family: retroFont; margin:0px '>TECHNICK</h2>
+              <h2 style='font-family: retroFont;color:white; margin:0px '>TECHNICK</h2>
             </div>
             <div id="clock">
               <h5 style='color:white; margin:0px'>{{BC.clock | date: 'h:mm a'}}</h5>
@@ -98,7 +97,7 @@
           <h6 class='post_date'>{{SBC.current_post.updated_at | date}}</h6>
           <h2 class='post_title'>{{SBC.current_post.title}}</h2>
           <img class='post_img' src="{{SBC.current_post.img_url}}" alt="content">
-          <p class='post_content'ng-bind-html="SBC.current_post.content | blogFormat" ></p>
+          <div class='post_content'ng-bind-html="SBC.current_post.content" ></div>
         </div>
       </div>
       <div id="current_tweet">

@@ -103,6 +103,9 @@ pre
 	vertical-align: middle;
 	display:block;
 }
+.github-button{
+	text-decoration:none;
+}
 #current_tweet{
 	display:none;
 	overflow:hidden;
@@ -497,15 +500,7 @@ ul.share-buttons{
     filter:  drop-shadow(10px 10px 10px #222); 
 	display:inline-block;
 }
-#twitter_connect{
-	max-height:75px;
-}
-#tumblr_connect{
-	max-height: 75px;
-}
-#github_connect{
-	max-height:75px;
-}
+
 #infowrapper{
 	text-align: left;
 	margin-bottom:2.5vh;
