@@ -255,7 +255,7 @@ mccroryModule.directive('setClassWhenAtTop', function ($window,$timeout) {
 mccroryModule.filter('blogFormat', function(){
 	return function(text){
 		if(text !== undefined){
-			var cleanText = text.replace(/-n/g, '<br><br>').replace(/-c/g, "<div class='code'><p>").replace(/c-/g, '</p></div>').replace(/-h5/g, '<h5>').replace(/h5-/g, '</h5>').replace(/-h3/g, '<h3>').replace(/h3-/g, '</h3>');
+			var cleanText = text.replace(/-n/g, '<br>').replace(/-c/g, "<div class='code'><p>").replace(/c-/g, '</p></div>').replace(/-h5/g, '<h5>').replace(/h5-/g, '</h5>').replace(/-h3/g, '<h3>').replace(/h3-/g, '</h3>').replace(/-a/g, '<a href="').replace(/-ref/g, '">').replace(/a-/g, '</a>');
 			
 			return cleanText;
 		}
