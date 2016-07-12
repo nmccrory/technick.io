@@ -22,7 +22,6 @@ mccroryModule.config(function ($routeProvider){
 		cache: false,
 		controller: 'soloBlogController as SBC',
 		templateUrl: 'partials/blog.html'
-		
 	})
 	.when('/resume', {
 		templateUrl: 'partials/resume.html'
@@ -98,42 +97,14 @@ mccroryModule.controller('soloBlogController', function(BlogFactory, $scope, $ro
 	var that = this;
 	this.current_post = {};
 	this.googleAnalytics = function(){
-		buildscript {
-		    repositories {
-		        mavenCentral()
-		    }
-		    dependencies {
-		        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.6.RELEASE")
-		    }
-		}
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-		apply plugin: 'java'
-		apply plugin: 'eclipse'
-		apply plugin: 'idea'
-		apply plugin: 'spring-boot'
+	  ga('create', 'UA-80656926-1', 'auto');
+	  ga('send', 'pageview');
 
-		jar {
-		    baseName = 'gs-consuming-rest'
-		    version =  '0.1.0'
-		}
-
-		repositories {
-		    mavenCentral()
-		}
-
-		sourceCompatibility = 1.8
-		targetCompatibility = 1.8
-
-		dependencies {
-		    compile("org.springframework.boot:spring-boot-starter")
-		    compile("org.springframework:spring-web")
-		    compile("com.fasterxml.jackson.core:jackson-databind")
-		    testCompile("junit:junit")
-		}
-
-		task wrapper(type: Wrapper) {
-		    gradleVersion = '2.3'
-		}
 	};
 	this.googleAnalytics();
 	this.loadPost = function(rest){
@@ -169,42 +140,14 @@ mccroryModule.controller('blogsController', function(BlogFactory, ProjectFactory
 		twttr.widgets.load();
 	}, 200);
 	this.googleAnalytics = function(){
-		buildscript {
-		    repositories {
-		        mavenCentral()
-		    }
-		    dependencies {
-		        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.6.RELEASE")
-		    }
-		}
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-		apply plugin: 'java'
-		apply plugin: 'eclipse'
-		apply plugin: 'idea'
-		apply plugin: 'spring-boot'
+	  ga('create', 'UA-80656926-1', 'auto');
+	  ga('send', 'pageview');
 
-		jar {
-		    baseName = 'gs-consuming-rest'
-		    version =  '0.1.0'
-		}
-
-		repositories {
-		    mavenCentral()
-		}
-
-		sourceCompatibility = 1.8
-		targetCompatibility = 1.8
-
-		dependencies {
-		    compile("org.springframework.boot:spring-boot-starter")
-		    compile("org.springframework:spring-web")
-		    compile("com.fasterxml.jackson.core:jackson-databind")
-		    testCompile("junit:junit")
-		}
-
-		task wrapper(type: Wrapper) {
-		    gradleVersion = '2.3'
-		}
 	};
 	this.googleAnalytics();
 	this.leftNavExpand = function(){
