@@ -94,7 +94,7 @@
         <!-- Email Share -->
         <a href="mailto:?subject=Technick: {{SBC.current_post.title}}&amp;body=Check out this blog http://technick.io/#/blogs/{{SBC.current_post.rest_route}}"><div class="email share"><img src="../images/share/email.png" alt=""></div></a>
         <div ng-show="SBC.current_post " class='blogpost'>
-          <h6 class='post_date'>{{SBC.current_post.updated_at | date}}</h6>
+          <h6 class='post_date'>{{SBC.current_post.author}} | {{SBC.current_post.updated_at | date}}</h6>
           <h2 class='post_title'>{{SBC.current_post.title}}</h2>
           <img class='post_img' src="{{SBC.current_post.img_url}}" alt="content">
           <div class='post_content'ng-bind-html="SBC.current_post.content" ></div>

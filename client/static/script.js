@@ -1,4 +1,4 @@
-var mccroryModule = angular.module('BlogApp', ['ngRoute', 'ngSanitize', 'djds4rce.angular-socialshare', 'yaru22.angular-timeago', 'truncate']);
+var mccroryModule = angular.module('BlogApp', ['ngRoute', 'ngSanitize', 'djds4rce.angular-socialshare', 'yaru22.angular-timeago', 'truncate', 'angular-google-analytics']);
 
 mccroryModule.config(function ($routeProvider){
 	$routeProvider
@@ -30,13 +30,12 @@ mccroryModule.config(function ($routeProvider){
 		redirectTo: '/'
 	})
 })
+mccroryModule.config(function (AnalyticsProvider) {
+	AnalyticsProvider.setAccount('UA-80656926-1');
+})
 mccroryModule.run(function($FB){
   $FB.init('970654203025977');
 });
-/*mccroryModule.config(function($locationProvider){
-    $locationProvider.html5Mode(true).hashPrefix('!');
-})*/
-
 mccroryModule.factory('BlogFactory',function($http, $location){
 	var blogs = [];
 	var factory = {};
@@ -96,17 +95,7 @@ mccroryModule.factory('ProjectFactory',function($http, $location){
 mccroryModule.controller('soloBlogController', function(BlogFactory, $scope, $routeParams){
 	var that = this;
 	this.current_post = {};
-	this.googleAnalytics = function(){
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-80656926-1', 'auto');
-	  ga('send', 'pageview');
-
-	};
-	this.googleAnalytics();
 	this.loadPost = function(rest){
 		BlogFactory.getBlogByRoute(rest, function(data){
 				that.current_post = data[0];
@@ -139,17 +128,7 @@ mccroryModule.controller('blogsController', function(BlogFactory, ProjectFactory
 	$timeout(function(){
 		twttr.widgets.load();
 	}, 200);
-	this.googleAnalytics = function(){
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-80656926-1', 'auto');
-	  ga('send', 'pageview');
-
-	};
-	this.googleAnalytics();
 	this.leftNavExpand = function(){
 		document.getElementById('navbarBackgroundLeft').classList.add('navbarBackgroundLeft');
 		document.getElementById('leftSideNavbar').classList.remove('leftSideNavbar');
