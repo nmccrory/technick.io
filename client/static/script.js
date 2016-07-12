@@ -97,7 +97,45 @@ mccroryModule.factory('ProjectFactory',function($http, $location){
 mccroryModule.controller('soloBlogController', function(BlogFactory, $scope, $routeParams){
 	var that = this;
 	this.current_post = {};
-	
+	this.googleAnalytics = function(){
+		buildscript {
+		    repositories {
+		        mavenCentral()
+		    }
+		    dependencies {
+		        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.6.RELEASE")
+		    }
+		}
+
+		apply plugin: 'java'
+		apply plugin: 'eclipse'
+		apply plugin: 'idea'
+		apply plugin: 'spring-boot'
+
+		jar {
+		    baseName = 'gs-consuming-rest'
+		    version =  '0.1.0'
+		}
+
+		repositories {
+		    mavenCentral()
+		}
+
+		sourceCompatibility = 1.8
+		targetCompatibility = 1.8
+
+		dependencies {
+		    compile("org.springframework.boot:spring-boot-starter")
+		    compile("org.springframework:spring-web")
+		    compile("com.fasterxml.jackson.core:jackson-databind")
+		    testCompile("junit:junit")
+		}
+
+		task wrapper(type: Wrapper) {
+		    gradleVersion = '2.3'
+		}
+	};
+	this.googleAnalytics();
 	this.loadPost = function(rest){
 		BlogFactory.getBlogByRoute(rest, function(data){
 				that.current_post = data[0];
@@ -130,7 +168,45 @@ mccroryModule.controller('blogsController', function(BlogFactory, ProjectFactory
 	$timeout(function(){
 		twttr.widgets.load();
 	}, 200);
+	this.googleAnalytics = function(){
+		buildscript {
+		    repositories {
+		        mavenCentral()
+		    }
+		    dependencies {
+		        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.6.RELEASE")
+		    }
+		}
 
+		apply plugin: 'java'
+		apply plugin: 'eclipse'
+		apply plugin: 'idea'
+		apply plugin: 'spring-boot'
+
+		jar {
+		    baseName = 'gs-consuming-rest'
+		    version =  '0.1.0'
+		}
+
+		repositories {
+		    mavenCentral()
+		}
+
+		sourceCompatibility = 1.8
+		targetCompatibility = 1.8
+
+		dependencies {
+		    compile("org.springframework.boot:spring-boot-starter")
+		    compile("org.springframework:spring-web")
+		    compile("com.fasterxml.jackson.core:jackson-databind")
+		    testCompile("junit:junit")
+		}
+
+		task wrapper(type: Wrapper) {
+		    gradleVersion = '2.3'
+		}
+	};
+	this.googleAnalytics();
 	this.leftNavExpand = function(){
 		document.getElementById('navbarBackgroundLeft').classList.add('navbarBackgroundLeft');
 		document.getElementById('leftSideNavbar').classList.remove('leftSideNavbar');
