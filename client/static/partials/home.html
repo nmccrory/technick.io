@@ -40,8 +40,9 @@
 </div>
 <div id="background">  
   <div style="background:transparent">
-    <div class="row" style="background:url('../images/stars.jpg') no-repeat ;background-size: cover">
-      <div class="twelve column" style='background:RGBA(8, 6, 7, .4);'>
+    <div class="row" style="background:url('../images/stars.jpg') no-repeat center center; background-size:cover;">
+      <!-- style='background:RGBA(8, 6, 7, .4);' -->
+      <div class="twelve column" >
         <div class="container">
           <div id='headingWrapper'> 
             
@@ -92,9 +93,9 @@
         <!-- Twitter Share -->
         <a href="{{BC.twitterURI}}"><div class="twitter share"><img src="../images/share/twitter.png" alt=""></div></a>
         <!-- Facebook Share -->
-        <a  facebook-feed-share data-url="afternoon-hollows-7443.herokuapp.com/#/blogs/{{BC.current_post.rest_route}}", data-name="{{BC.current_post.title}}", data-picture="{{BC.current_post.img_url}}", data-description="{{BC.current_post.created_at | date}}"></a>
+        <a  facebook-feed-share data-url="http://www.technick.io/#/blogs/{{BC.current_post.rest_route}}", data-name="{{BC.current_post.title}}", data-picture="{{BC.current_post.img_url}}", data-description="{{BC.current_post.created_at | date}}"></a>
         <!-- Linkedin Share -->
-        <a href="http://www.linkedin.com/shareArticle?mini=true&url=afternoon-hollows-7443.herokuapp.com/blogs/{{BC.current_post.rest_route}}&title={{BC.current_post.title}}&source=technick.io"><div class="linkdin share"><img src="../images/share/Linkedin.png" alt=""></div></a>
+        <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.technick.io/#/blogs/{{BC.current_post.rest_route}}&title={{BC.current_post.title}}&source=technick.io"><div class="linkdin share"><img src="../images/share/Linkedin.png" alt=""></div></a>
         <!-- Email Share -->
         <a href="mailto:?subject=Technick: {{BC.current_post.title}}&amp;body=Check out this blog http://technick.io/#/blogs/{{BC.current_post.rest_route}}"><div class="email share"><img src="../images/share/email.png" alt=""></div></a>
         <div ng-show="BC.current_post" class='blogpost'>

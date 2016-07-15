@@ -2,10 +2,6 @@
     font-family: retroFont;
     src: url(../fonts/mexcellent/mexcellent.ttf);
 }
-@font-face{
-	font-family: topSpeed;
-	src: url(../fonts/top_speed/topspeed.TTF);
-}
 code{
 	overflow-x: scroll;
 }
@@ -45,8 +41,6 @@ pre
     width: 100%;
     background:white;
     border-bottom: 3px solid #5FCEEA !important;
-  /*  border:none !important;*/
-/*    background:linear-gradient(to right,#00FF9E,#9F23EE) !important;*/
     transition: background 1000ms linear;
     z-index:1;
 }
@@ -80,9 +74,6 @@ pre
 	max-width: 30px;
 	padding:1vh;
 }
-.facebook{
-	background-color: #366BA6;
-}
 .twitter{
 	background-color: #03B5EF;
 }
@@ -92,12 +83,12 @@ pre
 .email{
 	background-color: #32E278;
 }
-#socialOption img{
+/*#socialOption img{
 	width:80%;
-}
-#background{
+}*/
+/*#background{
 	background-color:#FBFBFB;
-}
+}*/
 #headingWrapper{
 	width:100%;
 	vertical-align: middle;
